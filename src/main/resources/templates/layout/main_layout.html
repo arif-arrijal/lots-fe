@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html style="font-family: Calibri, sans-serif !important;"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <th:block th:replace="fragments/head :: head" />
+    <th:block layout:fragment="css-addition" />
+</head>
+<body style="height:100%; width:100%; overflow: hidden; margin: 1%">
+    <div th:replace="fragments/header :: header"></div>
+    <th:block layout:fragment="content" />
+</body>
+<th:block th:replace="fragments/js-common :: js-common"/>
+<th:block layout:fragment="js-addition"/>
+</html>

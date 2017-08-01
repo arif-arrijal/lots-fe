@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<input type="hidden" id="error-msg" name="error-msg" th:value="${errorMsg}" />
+    <th:block layout:fragment="js-addition">
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+            var message = $('#error-msg').val();
+            swal({
+                title: "Error Notification",
+                text: message,
+                type: "error",
+                showConfirmButton: true,
+                html: true
+            });
+            /*]]>*/
+        </script>
+    </th:block>
+</html>
