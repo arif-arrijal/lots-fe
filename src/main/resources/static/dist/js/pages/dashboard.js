@@ -1,8 +1,8 @@
 $(document).ready(function() {
     var existingRowId = 1, highlightRowId = 1;
 
-    // var wsUri = "ws://202.77.104.244:8080/lots/runningtrade";
-    var wsUri = "ws://" + location.hostname + ":8080/lots/runningtrade";
+    var wsUri = "ws://202.77.104.244:8080/lots/runningtrade";
+    // var wsUri = "ws://" + location.hostname + ":8080/lots/runningtrade";
     var websocket = new ReconnectingWebSocket(wsUri, null, {debug: false, reconnectInterval:3000, binaryType: "arraybuffer"});
     websocket.onopen    = function(evt) { onOpen(evt) };
     websocket.onclose   = function(evt) { onClose(evt) };
@@ -208,7 +208,7 @@ $(document).ready(function() {
     }
 
     function getColumn() {
-        return $('<td></td>');
+        return $('<td ></td>');
     }
 
     function addSpace(){
