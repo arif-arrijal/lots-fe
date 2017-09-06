@@ -10,4 +10,9 @@ public class MainController {
     public String index(){
         return "dashboard/index";
     }
+
+    @RequestMapping("/login")
+    public String login(){
+        return "auth/login";
+    }
 }

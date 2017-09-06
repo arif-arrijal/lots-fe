@@ -57,7 +57,7 @@ $(document).ready(function() {
         var lots                = message.lots.replace(".00", "");
         var price_color         = getPriceColor(change_value);
 
-        var row = $('<tr style="height: 0"></tr>');
+        var row = $('<tr style="height: 0;"></tr>');
         row.attr('id', 'row' + existingRowId);
 
         row.append(
