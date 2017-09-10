@@ -1,22 +1,30 @@
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-    <title>Lots Log in</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <title>Lotus Online Trading System | Log in</title>
+    <link rel="stylesheet" href="/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="/dist/css/AdminLTE.min.css" />
 </head>
-<body class="hold-transition login-page">
+<body style="overflow-y: hidden" class="hold-transition login-page">
 <div class="login-box">
 
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <h3 style="margin: 0;font-weight: bold">LOTUS</h3>
+                <h3 style="margin: 0;font-weight: bold">ONLINE</h3>
+                <h3 style="margin: 0;font-weight: bold">TRADING</h3>
+                <h3 style="margin-top: 0; margin-bottom: 10vh; font-weight: bold">SYSTEM</h3>
+            </div>
+        </div>
 
-        <form th:action="@{/login}" method="post">
+        <form style="margin-bottom: 10vh" th:action="@{/login}" method="post">
             <div class="form-group has-feedback has-feedback-left">
                 <span class="fa fa-user form-control-feedback" aria-hidden="true"></span>
                 <input type="text" class="form-control" name="username" placeholder="Username" />
@@ -26,16 +34,28 @@
                 <input type="password" class="form-control" name="password" placeholder="Password" />
             </div>
             <div class="row">
-                <div class="col-xs-12">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">LOGIN</button>
                 </div>
+                <div class="col-xs-2"></div>
             </div>
         </form>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4 style="text-align: center; font-weight: bold">Or</h4>
+                <h4 style="text-align: center; font-weight: bold">
+                    <a>Registration for Free Trial</a>
+                </h4>
+            </div>
+
+        </div>
     </div>
 </div>
 </body>
 <th:block layout:fragment="js-addition">
-    <script th:src="@{/plugins/jQuery/jQuery-2.2.0.min.js}"></script>
-    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/dist/js/jQuery-2.2.0.min.js}"></script>
+    <script th:src="@{/dist/js/bootstrap.min.js}"></script>
 </th:block>
 </html>

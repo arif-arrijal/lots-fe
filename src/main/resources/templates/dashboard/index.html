@@ -4,7 +4,7 @@
       layout:decorator="layout/main_layout">
 <body>
 <th:block layout:fragment="content">
-    <div class="row" style="position:fixed; top:15vh; height: 85vh; left:0; right:0; overflow:hidden;" >
+    <div class="row main-content">
         <div style="background-color: black; padding-right: 0; height: 100%" class="col-8 col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
 
             <!--row stock quote 1-->
@@ -139,25 +139,46 @@
         </div>
 
         <!--running trade-->
-        <div id="parentRow" style="background-color: black; padding-left: 0; height: 100%" class="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <div style="background-color:black;height:100%;overflow:hidden; border: 1px rgb(85,110,150) solid; border-top: 0">
+        <div id="parentRow" class="rt-parent col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="rt-parent-div">
                 <table style="margin-bottom: 0; width: 100%" class="table-condensed table-sm table-responsive fixed">
                     <thead>
                     <tr style="background-color: rgb(15,110,160); color: white">
                         <th colspan="8" style="text-align: center">Running Trade</th>
                     </tr>
-                    <tr style="background-color: black; color: rgb(255,105,95); border-bottom: 1px rgb(85,110,150) solid">
-                        <th style="width: 8%">Time</th>
-                        <th style="width: 8%">Mkt</th>
-                        <th style="width: 14%">Stock</th>
-                        <th style="width: 11%">Buy</th>
-                        <th style="width: 11%">Sell</th>
-                        <th style="width: 16%">Price</th>
-                        <th style="width: 16%">Chg</th>
-                        <th style="width: 16%">Qty</th>
+                    <tr class="rt-head">
+                        <th class="element-text" style="width: 8%">Time</th>
+                        <th class="element-text" style="width: 8%">Mkt</th>
+                        <th class="element-text" style="width: 14%">Stock</th>
+                        <th class="element-balance" style="width: 11%">Buy</th>
+                        <th class="element-balance" style="width: 11%">Sell</th>
+                        <th class="element-balance" style="width: 16%">Price</th>
+                        <th class="element-balance" style="width: 16%">Chg</th>
+                        <th class="element-balance" style="width: 16%">Qty</th>
                     </tr>
                     </thead>
-                    <tbody id="incomingTableData" ></tbody>
+                    <tbody id="incomingTableData" >
+                    <tr style="height: 0; color: white">
+                        <td class="element-text">12.05</td>
+                        <td class="element-text">NG</td>
+                        <td class="element-text">BUMI</td>
+                        <td class="element-balance">1000</td>
+                        <td class="element-balance">7000</td>
+                        <td class="element-balance">4000</td>
+                        <td class="element-balance">100</td>
+                        <td class="element-balance">1000</td>
+                    </tr>
+                    <tr style="height: 0; color: white">
+                        <td class="element-text">14.07</td>
+                        <td class="element-text">GN</td>
+                        <td class="element-text">CGKA</td>
+                        <td class="element-balance">3000</td>
+                        <td class="element-balance">5000</td>
+                        <td class="element-balance">1000</td>
+                        <td class="element-balance">200</td>
+                        <td class="element-balance">5000</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

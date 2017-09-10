@@ -21,33 +21,34 @@ public class CustomWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
-        http
-        .csrf()
-            .disable()
-        .authorizeRequests()
-            .anyRequest()
-            .authenticated()
-            .and()
-        .formLogin()
-            .loginPage("/login")
-            .permitAll()
-            .and()
-        .logout()
-            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-            .logoutSuccessUrl("/login")
-            .invalidateHttpSession(true)
-            .and()
-        .exceptionHandling()
-            .accessDeniedPage("/error/403");
+        http.csrf().disable().authorizeRequests().anyRequest().permitAll();
+//        http
+//        .csrf()
+//            .disable()
+//        .authorizeRequests()
+//            .anyRequest()
+//            .authenticated()
+//            .and()
+//        .formLogin()
+//            .loginPage("/login")
+//            .permitAll()
+//            .and()
+//        .logout()
+//            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+//            .logoutSuccessUrl("/login")
+//            .invalidateHttpSession(true)
+//            .and()
+//        .exceptionHandling()
+//            .accessDeniedPage("/error/403");
     }
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .inMemoryAuthentication()
-                .withUser("lots")
-                .password("lautan123")
-                .roles("USER");
-    }
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+//        auth
+//                .inMemoryAuthentication()
+//                .withUser("lots")
+//                .password("lautan123")
+//                .roles("USER");
+//    }
 
 }

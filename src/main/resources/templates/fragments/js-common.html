@@ -1,29 +1,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <th:block th:fragment="js-common">
-  <!-- jQuery 2.2.0 -->
-  <script src="/plugins/jQuery/jQuery-2.2.0.min.js"></script>
-  <!-- jQuery UI 1.11.4 -->
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <script src="/plugins/clipboardjs/clipboard.min.js"></script>
-  <script src="/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/dist/js/app.min.js"></script>
-  <script src="/dist/js/demo.js"></script>
-  <script src="/plugins/alertifyjs/alertify.min.js"></script>
-  <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="/plugins/datatables/dataTables.bootstrap.min.js"></script>
-  <script src="/plugins/nprogress/nprogress.js"></script>
-  <script src="/plugins/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="/plugins/toastr/toastr.min.js"></script>
-  <script src="/plugins/ladda/ladda.jquery.min.js"></script>
-  <script src="/plugins/ladda/spin.min.js"></script>
-  <script src="/plugins/ladda/ladda.min.js"></script>
+  <script src="/dist/js/global-var.js"></script>
+  <script src="/dist/js/global-method.js"></script>
   <script src="/dist/js/reconnecting-websocket.min.js"></script>
-
-  <script>
-      new Clipboard('.btn');
-
-      $.widget.bridge('uibutton', $.ui.button);
-
-  </script>
+  <script src="/dist/js/jQuery-2.2.0.min.js"></script>
+  <script src="/dist/js/bootstrap.min.js"></script>
 </th:block>
 </html>
